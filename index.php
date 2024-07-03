@@ -18,6 +18,11 @@ $ciboCaneUno = new Cibo (
 
 );
 
+$ciboGattoUno = new Cibo (
+    'Almo Nature Cat Daily Lattina', 34.99, 'https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg', 'Cibo', $categoriaGatto, '400g', 'Tonno, Pollo, Prosciutto'
+)
+
+
 // echo var_dump($ciboCaneUno);
 
 
@@ -49,8 +54,10 @@ $ciboCaneUno = new Cibo (
                 <h2>Prodotti</h2>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 d-flex justify-content-around">
+
                 <div class="card" style="width: 18rem;">
                     <img src="<?php echo $ciboCaneUno->getImmagine(); ?>" class="card-img-top" alt="...">
 
@@ -64,6 +71,25 @@ $ciboCaneUno = new Cibo (
                     <p class="card-text">Peso Netto: <?php echo $ciboCaneUno->getPesoNetto(); ?></p>
                     <p class="card-text">Ingredienti: <?php echo $ciboCaneUno->getIngredienti(); ?></p>
                 </div>
+
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="<?php echo $ciboGattoUno->getImmagine(); ?>" class="card-img-top" alt="...">
+
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $ciboGattoUno->getTitolo(); ?></h5>
+
+                        <p class="card-text"><?php echo $ciboGattoUno->getCategoria()->getNome() . $ciboGattoUno->getCategoria()->getIcona(); ?></p>
+                        <p class="card-text"><?php ; ?></p>
+                                        
+                        <p class="card-text">Prezzo: <?php echo $ciboGattoUno->getPrezzo(); ?></p>
+                        <p class="card-text">Peso Netto: <?php echo $ciboGattoUno->getPesoNetto(); ?></p>
+                        <p class="card-text">Ingredienti: <?php echo $ciboGattoUno->getIngredienti(); ?></p>
+                    </div>
+               
+                </div>
+
             </div>
         </div>
     </div>
