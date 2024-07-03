@@ -33,7 +33,7 @@ $ciboCaneUno = new Cibo (
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -53,8 +53,13 @@ $ciboCaneUno = new Cibo (
             <div class="col-12">
                 <div class="card" style="width: 18rem;">
                     <img src="<?php echo $ciboCaneUno->getImmagine(); ?>" class="card-img-top" alt="...">
+
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $ciboCaneUno->getTitolo(); ?></h5>
+
+                        <p class="card-text"><?php echo $ciboCaneUno->getCategoria()->getNome() . $ciboCaneUno->getCategoria()->getIcona(); ?></p>
+                        <p class="card-text"><?php ; ?></p>
+                        
                     <p class="card-text">Prezzo: <?php echo $ciboCaneUno->getPrezzo(); ?></p>
                     <p class="card-text">Peso Netto: <?php echo $ciboCaneUno->getPesoNetto(); ?></p>
                     <p class="card-text">Ingredienti: <?php echo $ciboCaneUno->getIngredienti(); ?></p>
