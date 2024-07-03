@@ -37,3 +37,5 @@ Class Prodotto {
         return $this->categoria;
     }
 }
+
+?>
