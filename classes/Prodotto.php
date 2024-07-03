@@ -2,6 +2,7 @@
 
 Class Prodotto {
 
+
     private $titolo;
     private $prezzo;
     private $immagine;
